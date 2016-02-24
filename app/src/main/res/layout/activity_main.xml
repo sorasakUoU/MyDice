@@ -28,7 +28,7 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
+            android:id="@+id/DiceimageView"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:src="@drawable/dice1" />
@@ -42,7 +42,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
+            android:id="@+id/BackButton"
             android:src="@android:drawable/ic_media_previous"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_weight="1" />
@@ -51,14 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Random"
-            android:id="@+id/button"
+            android:id="@+id/Randombutton"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_weight="1" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
+            android:id="@+id/ForwardButton"
             android:src="@android:drawable/ic_media_next"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_weight="1" />
