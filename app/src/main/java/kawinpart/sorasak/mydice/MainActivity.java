@@ -9,7 +9,10 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView DiceImageView;
-    private Button BackButton, ForwardButton, RandomButton;
+    private Button RandomButton;
+    private ImageView ForwardButton, BackButton;
+    private int intdice = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
         BackController();
         ForwardController();
         RandomConttroller();
+        DiceImageView();
 
+
+    }
+
+    private void DiceImageView() {
 
     }
 
@@ -29,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         RandomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myRandomPicture(1);
+
+                myRandomPicture(intdice);
 
             }
         });
@@ -39,9 +50,46 @@ public class MainActivity extends AppCompatActivity {
         ForwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myRandomPicture(1);
+                intdice -= 1;
+                if (intdice == 0) {
+                    intdice = 6;
+                }
+                changeplay(DiceImageView);
+
 
             }
         });
+    }
+
+    private void changeplay(ImageView diceImageView) {
+
+
+        switch (intdice) {
+            case 1:
+                DiceImageView.setImageResource(R.drawable.dice1);
+                break;
+            case 2:
+                DiceImageView.setImageResource(R.drawable.dice2);
+                break;
+            case 3:
+                DiceImageView.setImageResource(R.drawable.dice3);
+                break;
+            case 4:
+                DiceImageView.setImageResource(R.drawable.dice4);
+                break;
+            case 5:
+                DiceImageView.setImageResource(R.drawable.dice5);
+                break;
+            case 6:
+                DiceImageView.setImageResource(R.drawable.dice6);
+                break;
+        }
+    }
+
+
+    private void myRandomPicture(int i) {
+
     }
 
     private void BackController() {
@@ -50,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                myRandomPicture(1);
+                intdice -= 1;
+                if (intdice == 0) {
+                    intdice = 6;
+                }
+                changeplay(DiceImageView);
             }
         });
     }
@@ -58,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
         DiceImageView = (ImageView) findViewById(R.id.DiceimageView);
         RandomButton = (Button) findViewById(R.id.Randombutton);
-        ForwardButton = (Button) findViewById(R.id.ForwardButton);
-        BackButton = (Button) findViewById(R.id.BackButton);
+        ForwardButton = (ImageView) findViewById(R.id.ForwardButton);
+        BackButton = (ImageView) findViewById(R.id.BackButton);
 
 
     }
