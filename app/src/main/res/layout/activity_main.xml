@@ -7,10 +7,61 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kawinpart.sorasak.mydice.MainActivity">
+    tools:context="kawinpart.sorasak.mydice.MainActivity"
+    android:background="@drawable/bg11">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/textView"
+        android:text="@string/D1"
+        android:textSize="@dimen/s1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dice1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random"
+            android:id="@+id/button"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:src="@android:drawable/ic_media_next"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="1" />
+    </LinearLayout>
+
 </RelativeLayout>
